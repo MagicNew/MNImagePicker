@@ -28,4 +28,8 @@
     [self setNeedsLayout];
 }
 
+- (IBAction)imageCheckButtonPressed:(id)sender {
+    UIButton *imageCheckButton = (UIButton *)sender;
+    imageCheckButton.selected = !imageCheckButton.selected;
+}
 @end

@@ -11,7 +11,7 @@
 @import UIKit;
 @import Photos;
 
-@interface MNAssetGridViewController : UICollectionViewController
+@interface MNAssetGridViewController : UIViewController
 
 @property (strong) PHFetchResult *assetsFetchResults;
 @property (strong) PHAssetCollection *assetCollection;

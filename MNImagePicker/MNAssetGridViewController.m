@@ -42,6 +42,7 @@
 
 
 @interface MNAssetGridViewController () <PHPhotoLibraryChangeObserver>
+@property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (strong) IBOutlet UIBarButtonItem *addButton;
 @property (strong) PHCachingImageManager *imageManager;
 @property CGRect previousPreheatRect;
@@ -72,7 +73,7 @@ static CGSize AssetGridThumbnailSize;
     [super viewWillAppear:animated];
     
 	CGFloat scale = [UIScreen mainScreen].scale;
-	CGSize cellSize = ((UICollectionViewFlowLayout *)self.collectionViewLayout).itemSize;
+	CGSize cellSize = ((UICollectionViewFlowLayout *)self.collectionView.collectionViewLayout).itemSize;
 	AssetGridThumbnailSize = CGSizeMake(cellSize.width * scale, cellSize.height * scale);
 
     if (!self.assetCollection || [self.assetCollection canPerformEditOperation:PHCollectionEditOperationAddContent]) {
