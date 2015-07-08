@@ -5,7 +5,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Photos-->
+        <!--相册-->
         <scene sceneID="mUr-pn-Lqf">
             <objects>
                 <tableViewController id="Eg3-EV-Pfg" customClass="MNImagePickerViewController" sceneMemberID="viewController">
@@ -57,7 +57,7 @@
                             <outlet property="delegate" destination="Eg3-EV-Pfg" id="gGB-Gl-Ha4"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Photos" id="PHG-DW-u7x">
+                    <navigationItem key="navigationItem" title="相册" id="PHG-DW-u7x">
                         <barButtonItem key="rightBarButtonItem" title="取消" style="plain" id="DlC-wZ-zIE">
                             <connections>
                                 <action selector="handleAddButtonItem:" destination="Eg3-EV-Pfg" id="LAq-iV-AWd"/>
@@ -274,6 +274,13 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="o9t-Rx-LjY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="textShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="5qa-1l-V3W">
                         <autoresizingMask key="autoresizingMask"/>
