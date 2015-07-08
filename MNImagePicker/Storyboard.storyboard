@@ -176,6 +176,7 @@
                                         </constraints>
                                         <connections>
                                             <outlet property="imageView" destination="WcL-aT-vqU" id="4q7-Hm-fwI"/>
+                                            <segue destination="fvd-bf-hd7" kind="push" id="Qfh-Yj-RBZ"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -227,7 +228,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="I1t-V9-K21" secondAttribute="trailing" id="LUv-bD-oEV"/>
                             <constraint firstItem="I1t-V9-K21" firstAttribute="top" secondItem="WLw-zI-4eX" secondAttribute="top" id="QKs-7j-BQK"/>
@@ -251,7 +252,7 @@
                     <navigationItem key="navigationItem" id="4Sl-nL-dex">
                         <nil key="title"/>
                         <progressView key="titleView" hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" id="Wu5-52-7Na">
-                            <rect key="frame" x="8" y="21" width="304" height="2.5"/>
+                            <rect key="frame" x="8" y="21" width="304" height="3"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </progressView>
                     </navigationItem>
