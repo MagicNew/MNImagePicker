@@ -14,6 +14,5 @@
 @interface MNGridViewCell : UICollectionViewCell
 
 @property (nonatomic, strong) UIImage *thumbnailImage;
-@property (nonatomic) BOOL bImageSelected;
 
 @end

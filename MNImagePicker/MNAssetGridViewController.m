@@ -93,7 +93,7 @@ static CGSize AssetGridThumbnailSize;
 {
     NSIndexPath *indexPath = [self.collectionView indexPathForCell:sender];
     MNAssetViewController *assetViewController = segue.destinationViewController;
-    assetViewController.asset = self.assetsFetchResults[indexPath.item];
+    assetViewController.assetsFetchResults = self.assetsFetchResults;
     assetViewController.assetCollection = self.assetCollection;
 }
 
@@ -170,22 +170,22 @@ static CGSize AssetGridThumbnailSize;
         
     }];
     
-    cell.bImageSelected = [self.selectedIndexs containsObject:@(indexPath.row)];
+//    cell.bImageSelected = [self.selectedIndexs containsObject:@(indexPath.row)];
     
     return cell;
 }
 
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    MNGridViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellReuseIdentifier forIndexPath:indexPath];
-    
-    if ([self.selectedIndexs containsObject:@(indexPath.row)]) {
-        cell.bImageSelected = NO;
-        [self.selectedIndexs removeObject:@(indexPath.row)];
-    } else {
-        cell.bImageSelected = YES;
-        [self.selectedIndexs addObject:@(indexPath.row)];
-    }
-}
+//- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+//    MNGridViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellReuseIdentifier forIndexPath:indexPath];
+//    
+//    if ([self.selectedIndexs containsObject:@(indexPath.row)]) {
+//        cell.bImageSelected = NO;
+//        [self.selectedIndexs removeObject:@(indexPath.row)];
+//    } else {
+//        cell.bImageSelected = YES;
+//        [self.selectedIndexs addObject:@(indexPath.row)];
+//    }
+//}
 
 #pragma mark - UIScrollViewDelegate
 

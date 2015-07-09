@@ -14,7 +14,7 @@
 
 @interface MNAssetViewController : UIViewController
 
-@property (strong) PHAsset *asset;
+@property (strong) PHFetchResult *assetsFetchResults;
 @property (strong) PHAssetCollection *assetCollection;
 
 @end

@@ -12,7 +12,6 @@
 
 @interface MNGridViewCell ()
 @property (strong) IBOutlet UIImageView *imageView;
-@property (weak, nonatomic) IBOutlet UIImageView *selectImageView;
 @end
 
 @implementation MNGridViewCell
@@ -20,12 +19,6 @@
 - (void)setThumbnailImage:(UIImage *)thumbnailImage {
     _thumbnailImage = thumbnailImage;
     self.imageView.image = thumbnailImage;
-}
-
-- (void)setBImageSelected:(BOOL)bImageSelected {
-    _bImageSelected = bImageSelected;
-    self.selectImageView.highlighted = bImageSelected;
-    [self setNeedsLayout];
 }
 
 - (IBAction)imageCheckButtonPressed:(id)sender {
