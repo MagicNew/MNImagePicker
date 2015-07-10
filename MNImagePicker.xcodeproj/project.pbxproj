@@ -18,6 +18,7 @@
 		4C5BBA071B4D04760078A2E8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C5BBA051B4D04760078A2E8 /* Info.plist */; };
 		4C5BBA081B4D04760078A2E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5BBA061B4D04760078A2E8 /* main.m */; };
 		4C5BBA0B1B4E35410078A2E8 /* MNAssetViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5BBA0A1B4E35410078A2E8 /* MNAssetViewCell.m */; };
+		4C5BBA0E1B4F614E0078A2E8 /* MNAssetLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5BBA0D1B4F614E0078A2E8 /* MNAssetLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,8 @@
 		4C5BBA061B4D04760078A2E8 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = MNImagePicker/main.m; sourceTree = SOURCE_ROOT; };
 		4C5BBA091B4E35410078A2E8 /* MNAssetViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNAssetViewCell.h; path = MNImagePicker/MNAssetViewCell.h; sourceTree = SOURCE_ROOT; };
 		4C5BBA0A1B4E35410078A2E8 /* MNAssetViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNAssetViewCell.m; path = MNImagePicker/MNAssetViewCell.m; sourceTree = SOURCE_ROOT; };
+		4C5BBA0C1B4F614E0078A2E8 /* MNAssetLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNAssetLayout.h; path = MNImagePicker/MNAssetLayout.h; sourceTree = SOURCE_ROOT; };
+		4C5BBA0D1B4F614E0078A2E8 /* MNAssetLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNAssetLayout.m; path = MNImagePicker/MNAssetLayout.m; sourceTree = SOURCE_ROOT; };
 		A738785B1989954300D76B24 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A7CF22CC1933ED8900E6E88E /* MNImagePicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MNImagePicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -89,6 +92,8 @@
 				4C5BB9F71B4D04710078A2E8 /* MNAssetViewController.m */,
 				4C5BBA091B4E35410078A2E8 /* MNAssetViewCell.h */,
 				4C5BBA0A1B4E35410078A2E8 /* MNAssetViewCell.m */,
+				4C5BBA0C1B4F614E0078A2E8 /* MNAssetLayout.h */,
+				4C5BBA0D1B4F614E0078A2E8 /* MNAssetLayout.m */,
 				4C5BB9FC1B4D04710078A2E8 /* Storyboard.storyboard */,
 				A7CF22CF1933ED8900E6E88E /* Supporting Files */,
 			);
@@ -178,6 +183,7 @@
 				4C5BBA011B4D04710078A2E8 /* MNAssetViewController.m in Sources */,
 				4C5BBA0B1B4E35410078A2E8 /* MNAssetViewCell.m in Sources */,
 				4C5BBA001B4D04710078A2E8 /* MNAssetGridViewController.m in Sources */,
+				4C5BBA0E1B4F614E0078A2E8 /* MNAssetLayout.m in Sources */,
 				4C5BB9FE1B4D04710078A2E8 /* MNAlbumViewCell.m in Sources */,
 				4C5BBA031B4D04710078A2E8 /* MNImagePickerViewController.m in Sources */,
 				4C5BBA081B4D04760078A2E8 /* main.m in Sources */,

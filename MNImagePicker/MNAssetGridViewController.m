@@ -170,22 +170,8 @@ static CGSize AssetGridThumbnailSize;
         
     }];
     
-//    cell.bImageSelected = [self.selectedIndexs containsObject:@(indexPath.row)];
-    
     return cell;
 }
-
-//- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-//    MNGridViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellReuseIdentifier forIndexPath:indexPath];
-//    
-//    if ([self.selectedIndexs containsObject:@(indexPath.row)]) {
-//        cell.bImageSelected = NO;
-//        [self.selectedIndexs removeObject:@(indexPath.row)];
-//    } else {
-//        cell.bImageSelected = YES;
-//        [self.selectedIndexs addObject:@(indexPath.row)];
-//    }
-//}
 
 #pragma mark - UIScrollViewDelegate
 
