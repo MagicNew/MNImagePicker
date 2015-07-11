@@ -11,14 +11,13 @@
 		4C5BB9FE1B4D04710078A2E8 /* MNAlbumViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5BB9F11B4D04710078A2E8 /* MNAlbumViewCell.m */; };
 		4C5BB9FF1B4D04710078A2E8 /* MNAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5BB9F31B4D04710078A2E8 /* MNAppDelegate.m */; };
 		4C5BBA001B4D04710078A2E8 /* MNAssetGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5BB9F51B4D04710078A2E8 /* MNAssetGridViewController.m */; };
-		4C5BBA011B4D04710078A2E8 /* MNAssetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5BB9F71B4D04710078A2E8 /* MNAssetViewController.m */; };
 		4C5BBA021B4D04710078A2E8 /* MNGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5BB9F91B4D04710078A2E8 /* MNGridViewCell.m */; };
-		4C5BBA031B4D04710078A2E8 /* MNImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5BB9FB1B4D04710078A2E8 /* MNImagePickerViewController.m */; };
+		4C5BBA031B4D04710078A2E8 /* MNAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5BB9FB1B4D04710078A2E8 /* MNAlbumViewController.m */; };
 		4C5BBA041B4D04710078A2E8 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C5BB9FC1B4D04710078A2E8 /* Storyboard.storyboard */; };
-		4C5BBA071B4D04760078A2E8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C5BBA051B4D04760078A2E8 /* Info.plist */; };
 		4C5BBA081B4D04760078A2E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5BBA061B4D04760078A2E8 /* main.m */; };
-		4C5BBA0B1B4E35410078A2E8 /* MNAssetViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5BBA0A1B4E35410078A2E8 /* MNAssetViewCell.m */; };
-		4C5BBA0E1B4F614E0078A2E8 /* MNAssetLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5BBA0D1B4F614E0078A2E8 /* MNAssetLayout.m */; };
+		4CB735171B50FEE3001243DB /* MNAssetItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB735141B50FEE3001243DB /* MNAssetItemViewController.m */; };
+		4CB735181B50FEE3001243DB /* MNAssetScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB735161B50FEE3001243DB /* MNAssetScrollView.m */; };
+		4CB7351B1B5121AD001243DB /* MNAssetPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB7351A1B5121AD001243DB /* MNAssetPickerViewController.m */; };
 		886924401B50E03D00E3C30D /* MNAssetPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8869243F1B50E03D00E3C30D /* MNAssetPageViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -30,19 +29,19 @@
 		4C5BB9F31B4D04710078A2E8 /* MNAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNAppDelegate.m; path = MNImagePicker/MNAppDelegate.m; sourceTree = SOURCE_ROOT; };
 		4C5BB9F41B4D04710078A2E8 /* MNAssetGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNAssetGridViewController.h; path = MNImagePicker/MNAssetGridViewController.h; sourceTree = SOURCE_ROOT; };
 		4C5BB9F51B4D04710078A2E8 /* MNAssetGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNAssetGridViewController.m; path = MNImagePicker/MNAssetGridViewController.m; sourceTree = SOURCE_ROOT; };
-		4C5BB9F61B4D04710078A2E8 /* MNAssetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNAssetViewController.h; path = MNImagePicker/MNAssetViewController.h; sourceTree = SOURCE_ROOT; };
-		4C5BB9F71B4D04710078A2E8 /* MNAssetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNAssetViewController.m; path = MNImagePicker/MNAssetViewController.m; sourceTree = SOURCE_ROOT; };
 		4C5BB9F81B4D04710078A2E8 /* MNGridViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNGridViewCell.h; path = MNImagePicker/MNGridViewCell.h; sourceTree = SOURCE_ROOT; };
 		4C5BB9F91B4D04710078A2E8 /* MNGridViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNGridViewCell.m; path = MNImagePicker/MNGridViewCell.m; sourceTree = SOURCE_ROOT; };
-		4C5BB9FA1B4D04710078A2E8 /* MNImagePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNImagePickerViewController.h; path = MNImagePicker/MNImagePickerViewController.h; sourceTree = SOURCE_ROOT; };
-		4C5BB9FB1B4D04710078A2E8 /* MNImagePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNImagePickerViewController.m; path = MNImagePicker/MNImagePickerViewController.m; sourceTree = SOURCE_ROOT; };
+		4C5BB9FA1B4D04710078A2E8 /* MNAlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNAlbumViewController.h; path = MNImagePicker/MNAlbumViewController.h; sourceTree = SOURCE_ROOT; };
+		4C5BB9FB1B4D04710078A2E8 /* MNAlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNAlbumViewController.m; path = MNImagePicker/MNAlbumViewController.m; sourceTree = SOURCE_ROOT; };
 		4C5BB9FC1B4D04710078A2E8 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard.storyboard; path = MNImagePicker/Storyboard.storyboard; sourceTree = SOURCE_ROOT; };
 		4C5BBA051B4D04760078A2E8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = MNImagePicker/Info.plist; sourceTree = SOURCE_ROOT; };
 		4C5BBA061B4D04760078A2E8 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = MNImagePicker/main.m; sourceTree = SOURCE_ROOT; };
-		4C5BBA091B4E35410078A2E8 /* MNAssetViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNAssetViewCell.h; path = MNImagePicker/MNAssetViewCell.h; sourceTree = SOURCE_ROOT; };
-		4C5BBA0A1B4E35410078A2E8 /* MNAssetViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNAssetViewCell.m; path = MNImagePicker/MNAssetViewCell.m; sourceTree = SOURCE_ROOT; };
-		4C5BBA0C1B4F614E0078A2E8 /* MNAssetLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNAssetLayout.h; path = MNImagePicker/MNAssetLayout.h; sourceTree = SOURCE_ROOT; };
-		4C5BBA0D1B4F614E0078A2E8 /* MNAssetLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNAssetLayout.m; path = MNImagePicker/MNAssetLayout.m; sourceTree = SOURCE_ROOT; };
+		4CB735131B50FEE3001243DB /* MNAssetItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNAssetItemViewController.h; path = MNImagePicker/MNAssetItemViewController.h; sourceTree = SOURCE_ROOT; };
+		4CB735141B50FEE3001243DB /* MNAssetItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNAssetItemViewController.m; path = MNImagePicker/MNAssetItemViewController.m; sourceTree = SOURCE_ROOT; };
+		4CB735151B50FEE3001243DB /* MNAssetScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNAssetScrollView.h; path = MNImagePicker/MNAssetScrollView.h; sourceTree = SOURCE_ROOT; };
+		4CB735161B50FEE3001243DB /* MNAssetScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNAssetScrollView.m; path = MNImagePicker/MNAssetScrollView.m; sourceTree = SOURCE_ROOT; };
+		4CB735191B5121AD001243DB /* MNAssetPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNAssetPickerViewController.h; path = MNImagePicker/MNAssetPickerViewController.h; sourceTree = SOURCE_ROOT; };
+		4CB7351A1B5121AD001243DB /* MNAssetPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNAssetPickerViewController.m; path = MNImagePicker/MNAssetPickerViewController.m; sourceTree = SOURCE_ROOT; };
 		8869243E1B50E03D00E3C30D /* MNAssetPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNAssetPageViewController.h; path = MNImagePicker/MNAssetPageViewController.h; sourceTree = SOURCE_ROOT; };
 		8869243F1B50E03D00E3C30D /* MNAssetPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNAssetPageViewController.m; path = MNImagePicker/MNAssetPageViewController.m; sourceTree = SOURCE_ROOT; };
 		A738785B1989954300D76B24 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -83,8 +82,10 @@
 				4C5BB9EF1B4D04710078A2E8 /* Images.xcassets */,
 				4C5BB9F21B4D04710078A2E8 /* MNAppDelegate.h */,
 				4C5BB9F31B4D04710078A2E8 /* MNAppDelegate.m */,
-				4C5BB9FA1B4D04710078A2E8 /* MNImagePickerViewController.h */,
-				4C5BB9FB1B4D04710078A2E8 /* MNImagePickerViewController.m */,
+				4CB735191B5121AD001243DB /* MNAssetPickerViewController.h */,
+				4CB7351A1B5121AD001243DB /* MNAssetPickerViewController.m */,
+				4C5BB9FA1B4D04710078A2E8 /* MNAlbumViewController.h */,
+				4C5BB9FB1B4D04710078A2E8 /* MNAlbumViewController.m */,
 				4C5BB9F01B4D04710078A2E8 /* MNAlbumViewCell.h */,
 				4C5BB9F11B4D04710078A2E8 /* MNAlbumViewCell.m */,
 				4C5BB9F41B4D04710078A2E8 /* MNAssetGridViewController.h */,
@@ -93,12 +94,10 @@
 				4C5BB9F91B4D04710078A2E8 /* MNGridViewCell.m */,
 				8869243E1B50E03D00E3C30D /* MNAssetPageViewController.h */,
 				8869243F1B50E03D00E3C30D /* MNAssetPageViewController.m */,
-				4C5BB9F61B4D04710078A2E8 /* MNAssetViewController.h */,
-				4C5BB9F71B4D04710078A2E8 /* MNAssetViewController.m */,
-				4C5BBA091B4E35410078A2E8 /* MNAssetViewCell.h */,
-				4C5BBA0A1B4E35410078A2E8 /* MNAssetViewCell.m */,
-				4C5BBA0C1B4F614E0078A2E8 /* MNAssetLayout.h */,
-				4C5BBA0D1B4F614E0078A2E8 /* MNAssetLayout.m */,
+				4CB735131B50FEE3001243DB /* MNAssetItemViewController.h */,
+				4CB735141B50FEE3001243DB /* MNAssetItemViewController.m */,
+				4CB735151B50FEE3001243DB /* MNAssetScrollView.h */,
+				4CB735161B50FEE3001243DB /* MNAssetScrollView.m */,
 				4C5BB9FC1B4D04710078A2E8 /* Storyboard.storyboard */,
 				A7CF22CF1933ED8900E6E88E /* Supporting Files */,
 			);
@@ -141,7 +140,7 @@
 		A7CF22C41933ED8900E6E88E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastUpgradeCheck = 0640;
 				TargetAttributes = {
 					A7CF22CB1933ED8900E6E88E = {
 						CreatedOnToolsVersion = 6.0;
@@ -173,7 +172,6 @@
 			files = (
 				4C5BB9FD1B4D04710078A2E8 /* Images.xcassets in Resources */,
 				4C5BBA041B4D04710078A2E8 /* Storyboard.storyboard in Resources */,
-				4C5BBA071B4D04760078A2E8 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,14 +183,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C5BB9FF1B4D04710078A2E8 /* MNAppDelegate.m in Sources */,
-				4C5BBA011B4D04710078A2E8 /* MNAssetViewController.m in Sources */,
-				4C5BBA0B1B4E35410078A2E8 /* MNAssetViewCell.m in Sources */,
+				4CB7351B1B5121AD001243DB /* MNAssetPickerViewController.m in Sources */,
+				4CB735171B50FEE3001243DB /* MNAssetItemViewController.m in Sources */,
 				4C5BBA001B4D04710078A2E8 /* MNAssetGridViewController.m in Sources */,
-				4C5BBA0E1B4F614E0078A2E8 /* MNAssetLayout.m in Sources */,
 				886924401B50E03D00E3C30D /* MNAssetPageViewController.m in Sources */,
 				4C5BB9FE1B4D04710078A2E8 /* MNAlbumViewCell.m in Sources */,
-				4C5BBA031B4D04710078A2E8 /* MNImagePickerViewController.m in Sources */,
+				4C5BBA031B4D04710078A2E8 /* MNAlbumViewController.m in Sources */,
 				4C5BBA081B4D04760078A2E8 /* main.m in Sources */,
+				4CB735181B50FEE3001243DB /* MNAssetScrollView.m in Sources */,
 				4C5BBA021B4D04710078A2E8 /* MNGridViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

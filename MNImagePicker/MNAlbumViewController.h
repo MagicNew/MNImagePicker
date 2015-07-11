@@ -10,6 +10,6 @@
 
 @import UIKit;
 
-@interface MNImagePickerViewController : UITableViewController
+@interface MNAlbumViewController : UITableViewController
 
 @end

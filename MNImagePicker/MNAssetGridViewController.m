@@ -9,9 +9,9 @@
  */
 
 #import "MNAssetGridViewController.h"
-
 #import "MNGridViewCell.h"
-#import "MNAssetViewController.h"
+#import "MNAssetPageViewController.h"
+#import "MNAssetPickerViewController.h"
 
 @import Photos;
 
@@ -41,12 +41,12 @@
 @end
 
 
-@interface MNAssetGridViewController () <PHPhotoLibraryChangeObserver>
+@interface MNAssetGridViewController ()
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
-@property (strong) IBOutlet UIBarButtonItem *addButton;
+@property (weak, nonatomic) IBOutlet UILabel *infoLabel;
+@property (weak, nonatomic) IBOutlet UIButton *finishiCollectButton;
 @property (strong) PHCachingImageManager *imageManager;
 @property CGRect previousPreheatRect;
-@property (nonatomic, strong) NSMutableArray *selectedIndexs;
 @end
 
 
@@ -59,13 +59,6 @@ static CGSize AssetGridThumbnailSize;
 {
     self.imageManager = [[PHCachingImageManager alloc] init];
     [self resetCachedAssets];
-    [[PHPhotoLibrary sharedPhotoLibrary] registerChangeObserver:self];
-    self.selectedIndexs = [NSMutableArray array];
-}
-
-- (void)dealloc
-{
-    [[PHPhotoLibrary sharedPhotoLibrary] unregisterChangeObserver:self];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -75,12 +68,8 @@ static CGSize AssetGridThumbnailSize;
 	CGFloat scale = [UIScreen mainScreen].scale;
 	CGSize cellSize = ((UICollectionViewFlowLayout *)self.collectionView.collectionViewLayout).itemSize;
 	AssetGridThumbnailSize = CGSizeMake(cellSize.width * scale, cellSize.height * scale);
-
-    if (!self.assetCollection || [self.assetCollection canPerformEditOperation:PHCollectionEditOperationAddContent]) {
-        self.navigationItem.rightBarButtonItem = self.addButton;
-    } else {
-        self.navigationItem.rightBarButtonItem = nil;
-    }
+    
+    [self updateInfoLabel];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -89,55 +78,17 @@ static CGSize AssetGridThumbnailSize;
     [self updateCachedAssets];
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    NSIndexPath *indexPath = [self.collectionView indexPathForCell:sender];
-    MNAssetViewController *assetViewController = segue.destinationViewController;
-    assetViewController.assetsFetchResults = self.assetsFetchResults;
-    assetViewController.assetCollection = self.assetCollection;
-}
-
-#pragma mark - PHPhotoLibraryChangeObserver
-
-- (void)photoLibraryDidChange:(PHChange *)changeInstance
-{
-    // Call might come on any background queue. Re-dispatch to the main queue to handle it.
-    dispatch_async(dispatch_get_main_queue(), ^{
-        
-        // check if there are changes to the assets (insertions, deletions, updates)
-        PHFetchResultChangeDetails *collectionChanges = [changeInstance changeDetailsForFetchResult:self.assetsFetchResults];
-        if (collectionChanges) {
-            
-            // get the new fetch result
-            self.assetsFetchResults = [collectionChanges fetchResultAfterChanges];
-            
-            UICollectionView *collectionView = self.collectionView;
-            
-            if (![collectionChanges hasIncrementalChanges] || [collectionChanges hasMoves]) {
-                // we need to reload all if the incremental diffs are not available
-                [collectionView reloadData];
-                
-            } else {
-                // if we have incremental diffs, tell the collection view to animate insertions and deletions
-                [collectionView performBatchUpdates:^{
-                    NSIndexSet *removedIndexes = [collectionChanges removedIndexes];
-                    if ([removedIndexes count]) {
-                        [collectionView deleteItemsAtIndexPaths:[removedIndexes aapl_indexPathsFromIndexesWithSection:0]];
-                    }
-                    NSIndexSet *insertedIndexes = [collectionChanges insertedIndexes];
-                    if ([insertedIndexes count]) {
-                        [collectionView insertItemsAtIndexPaths:[insertedIndexes aapl_indexPathsFromIndexesWithSection:0]];
-                    }
-                    NSIndexSet *changedIndexes = [collectionChanges changedIndexes];
-                    if ([changedIndexes count]) {
-                        [collectionView reloadItemsAtIndexPaths:[changedIndexes aapl_indexPathsFromIndexesWithSection:0]];
-                    }
-                } completion:NULL];
-            }
-            
-            [self resetCachedAssets];
-        }
-    });
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"showAssetImage"]) {
+        NSIndexPath *indexPath = [self.collectionView indexPathForCell:sender];
+        MNAssetPageViewController *assetViewController = segue.destinationViewController;
+        assetViewController.assets = self.assetsFetchResults;
+        assetViewController.pageIndex = indexPath.row;
+    } else if ([segue.identifier isEqualToString:@"showPreview"]) {
+        MNAssetPageViewController *assetViewController = segue.destinationViewController;
+        assetViewController.assets = self.assetsFetchResults;
+        assetViewController.pageIndex = 0;
+    }
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -295,6 +246,19 @@ static CGSize AssetGridThumbnailSize;
             NSLog(@"Error creating asset: %@", error);
         }
     }];
+}
+
+- (void)updateInfoLabel {
+    MNAssetPickerViewController *picker = (MNAssetPickerViewController *)self.navigationController;
+    NSInteger count = picker.maximumNumberOfSelections;
+    self.infoLabel.text = [NSString stringWithFormat:@"最多支持上传%@张", @(count)];
+}
+
+- (IBAction)finishCollectButtonPressed:(id)sender {
+    MNAssetPickerViewController *picker = (MNAssetPickerViewController *)self.navigationController;
+    if ([picker.pickerDelegate respondsToSelector:@selector(assetsPickerController:didFinishPickingImages:)]) {
+        [picker.pickerDelegate assetsPickerController:picker didFinishPickingImages:picker.selectedImages];
+    }
 }
 
 @end

@@ -6,11 +6,12 @@
 //
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
+@import Photos;
 
 @interface MNAssetPageViewController : UIPageViewController
 
 @property (nonatomic, assign) NSInteger pageIndex;
-@property (nonatomic, assign) NSArray *assets;
+@property (nonatomic, strong) PHFetchResult *assets;
 
 @end

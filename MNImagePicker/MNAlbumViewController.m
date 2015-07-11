@@ -8,7 +8,7 @@
   
  */
 
-#import "MNImagePickerViewController.h"
+#import "MNAlbumViewController.h"
 
 #import "MNAssetGridViewController.h"
 
@@ -17,12 +17,12 @@
 @import Photos;
 
 
-@interface MNImagePickerViewController () <PHPhotoLibraryChangeObserver>
+@interface MNAlbumViewController () <PHPhotoLibraryChangeObserver>
 @property (strong) NSArray *collectionsFetchResults;
 @property (strong) NSArray *collectionsLocalizedTitles;
 @end
 
-@implementation MNImagePickerViewController
+@implementation MNAlbumViewController
 
 static NSString * const CollectionCellReuseIdentifier = @"CollectionCell";
 static NSString * const CollectionSegue = @"showCollection";
